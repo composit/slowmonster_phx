@@ -1,0 +1,26 @@
+{
+  "name": "slowmonster",
+  "version": "0.1.0",
+  "description": "tracker of time and things",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mix test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/composit/slowmonster.git"
+  },
+  "author": "Matt Rose",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/composit/slowmonster/issues"
+  },
+  "homepage": "https://github.com/composit/slowmonster#readme"
+}
