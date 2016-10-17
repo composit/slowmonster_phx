@@ -38,5 +38,7 @@ defmodule Slowmonster.Endpoint do
     key: "_slowmonster_key",
     signing_salt: "1VFrryAO"
 
+  plug CORSPlug
+
   plug Slowmonster.Router
 end

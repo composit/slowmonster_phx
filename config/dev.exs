@@ -36,7 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 config :slowmonster, Slowmonster.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "b4o6L6ZSbUBP",
   database: "slowmonster_dev",
-  hostname: "localhost",
+  hostname: "db",
   pool_size: 10

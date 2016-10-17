@@ -26,6 +26,7 @@ defmodule Slowmonster.ConnCase do
       import Ecto.Query
 
       import Slowmonster.Router.Helpers
+      import Slowmonster.Factory
 
       # The default endpoint for testing
       @endpoint Slowmonster.Endpoint

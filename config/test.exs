@@ -13,7 +13,11 @@ config :logger, level: :warn
 config :slowmonster, Slowmonster.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "b4o6L6ZSbUBP",
   database: "slowmonster_test",
-  hostname: "localhost",
+  hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# faster encryption in test mode
+config :comeonin, :bcrypt_log_rounds, 4
+config :comeonin, :pbkdf2_rounds, 1

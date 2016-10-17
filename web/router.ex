@@ -23,4 +23,10 @@ defmodule Slowmonster.Router do
   # scope "/api", Slowmonster do
   #   pipe_through :api
   # end
+
+  scope "/api", Slowmonster do
+    pipe_through :api
+
+    resources "/users", UserController, only: [:create]
+  end
 end

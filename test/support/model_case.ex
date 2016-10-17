@@ -22,6 +22,7 @@ defmodule Slowmonster.ModelCase do
       import Ecto.Changeset
       import Ecto.Query
       import Slowmonster.ModelCase
+      import Slowmonster.Factory
     end
   end
 
