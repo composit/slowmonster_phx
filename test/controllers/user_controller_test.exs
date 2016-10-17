@@ -13,9 +13,9 @@ defmodule Slowmonster.UserControllerTest do
     body = json_response(conn, 201)
 
     assert body["data"]["id"]
-    assert body["data"]["email"] == params["email"]
+    assert body["data"]["email"] == params.email
     refute body["data"]["password"]
-    assert Repo.get_by(User, email: params["email"])
+    assert Repo.get_by(User, email: params.email)
   end
 
   test "does not create resource and renders errors when data is invalid", %{conn: conn} do
