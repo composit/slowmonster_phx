@@ -40,7 +40,8 @@ defmodule Slowmonster.Mixfile do
      {:cowboy, "~> 1.0"},
      {:ex_machina, "~> 1.0", only: :test},
      {:cors_plug, "~> 1.1"},
-     {:comeonin, "~> 2.0"}]
+     {:comeonin, "~> 2.0"},
+     {:secure_random, "~> 0.2"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

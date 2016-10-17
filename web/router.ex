@@ -27,6 +27,7 @@ defmodule Slowmonster.Router do
   scope "/api", Slowmonster do
     pipe_through :api
 
+    resources "/sessions", SessionController, only: [:create]
     resources "/users", UserController, only: [:create]
   end
 end
