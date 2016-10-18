@@ -15,7 +15,7 @@ defmodule Slowmonster.SessionControllerTest do
   test "creates and renders resource when data is valid", %{conn: conn} do
     conn = post conn, session_path(conn, :create), user: @user_params
 
-    assert token = json_response(conn, 201)["data"]["token"]
+    token = json_response(conn, 201)["data"]["token"]
     assert Repo.get_by(Session, token: token)
   end
 
@@ -31,7 +31,7 @@ defmodule Slowmonster.SessionControllerTest do
 
   test "does not create resource and renders errors when email is invalid", %{conn: conn} do
     params = Map.put(@user_params, :email, "notright@example.com")
-    conn = post conn, session_path(conn, :create), user: Map.put(@user_params, :email, "notright@example.com")
+    conn = post conn, session_path(conn, :create), user: params
     count_before = Repo.aggregate(Session, :count, :id)
     body = json_response(conn, 401)
     count_after = Repo.aggregate(Session, :count, :id)
