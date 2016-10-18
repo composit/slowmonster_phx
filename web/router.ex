@@ -28,6 +28,7 @@ defmodule Slowmonster.Router do
     pipe_through :api
 
     resources "/sessions", SessionController, only: [:create]
+    resources "/trackables", TrackableController, except: [:new, :edit]
     resources "/users", UserController, only: [:create]
   end
 end
