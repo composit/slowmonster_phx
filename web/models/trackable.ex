@@ -16,7 +16,7 @@ defmodule Slowmonster.Trackable do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:content, :priority, :closed_at, :days_in_week])
-    |> validate_required([:content, :priority, :closed_at, :days_in_week])
+    |> cast(params, [:content, :priority, :closed_at, :user_id, :days_in_week])
+    |> validate_required([:content, :user_id, :days_in_week])
   end
 end

@@ -7,6 +7,14 @@ defmodule Slowmonster.Factory do
     }
   end
 
+  def trackable_factory do
+    %Slowmonster.Trackable{
+      content: "pretty good",
+      user_id: insert(:user).id,
+      days_in_week: 5.0,
+    }
+  end
+
   def user_factory do
     %Slowmonster.User{
       email: sequence(:email, &"email-#{&1}@example.com"),

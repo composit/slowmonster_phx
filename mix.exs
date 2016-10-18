@@ -19,7 +19,7 @@ defmodule Slowmonster.Mixfile do
   def application do
     [mod: {Slowmonster, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin]]
+                    :phoenix_ecto, :postgrex, :comeonin, :tzdata]]
   end
 
   # Specifies which paths to compile per environment.
@@ -41,7 +41,9 @@ defmodule Slowmonster.Mixfile do
      {:ex_machina, "~> 1.0", only: :test},
      {:cors_plug, "~> 1.1"},
      {:comeonin, "~> 2.0"},
-     {:secure_random, "~> 0.2"}]
+     {:secure_random, "~> 0.2"},
+     {:timex, "~> 3.1.0"},
+     {:timex_ecto, "~> 3.0.5"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

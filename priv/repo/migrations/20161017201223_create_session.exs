@@ -1,5 +1,6 @@
 defmodule Slowmonster.Repo.Migrations.CreateSession do
   use Ecto.Migration
+  use Timex.Ecto.Timestamps
 
   def change do
     create table(:sessions) do
